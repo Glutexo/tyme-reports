@@ -40,5 +40,5 @@ puts CSV.generate col_sep: ';' do |csv|
       csv << [date.strftime('%Y-%m-%d'), task, day_task_sum.format('%th h %m m')]
     end
   end
-  csv << ['Celkem', '', total_sum.format('%th h %m m')]
+  csv << ['Total', '', total_sum.format('%th h %m m')]
 end
