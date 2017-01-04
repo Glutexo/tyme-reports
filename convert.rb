@@ -28,7 +28,7 @@ CSV.new(
   end
 end
 
-puts CSV.generate col_sep: ';' do |csv|
+puts (CSV.generate col_sep: ';' do |csv|
   total_sum = Duration.new 0
   by_date.keys.sort.each do |date|
     by_date[date].keys.sort.each do |task|
@@ -41,4 +41,4 @@ puts CSV.generate col_sep: ';' do |csv|
     end
   end
   csv << ['Total', '', total_sum.format('%th h %m m')]
-end
+end)
